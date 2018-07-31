@@ -1,0 +1,45 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body{
+    height: 100vh;
+    background: linear-gradient(-45deg, rgba(213,186,245,1) 0%, rgba(144,221,235,1) 25%, rgba(184,237,245,1) 48%, rgba(188,165,237,1) 100%);
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label  {
+    color: gray;
+}
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple, .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent,
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: transparent;
+    height: 0;
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper .mat-form-field-underline {
+    height: 0;
+}
+
+.mat-form-field .mat-form-field-subscript-wrapper{
+    position: relative;
+}
+
+.mat-form-field .mat-select.mat-select-invalid .mat-select-arrow {
+    color: gray;
+}
+
+.mat-form-field .mat-form-field-flex{
+    background-color: #f0fafc;
+    border-radius: 4px;
+    align-items: center;
+    height: 38px;
+}
+
+.mat-form-field .mat-form-field-infix{
+    border-top: 0;
+    margin: 0 15px;
+    font-size: 15px;
+}
+
+
+
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    padding-bottom: 0;
+}

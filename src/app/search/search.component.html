@@ -1,0 +1,28 @@
+<form [formGroup]="form" fxLayout ="column" fxLayout.gt-xs = "row"
+                         fxLayoutAlign ="center" fxLayoutAlign.gt-xs ="center start" 
+                         fxLayoutGap ="10px">
+
+  <mat-form-field floatLabel='never'
+                  fxFlex = "40" fxFlex.gt-sm ="50" >
+    <input matInput type="search" autofocus 
+           formControlName="searchField" 
+           placeholder="Введите текст для поиска">
+    <mat-error *ngIf="form.get('searchField')?.hasError('required')&& preSubmitInvalid">
+      Это поле не может быть <strong> пустым</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field fxFlex = "35" fxFlex.gt-md ="22" floatLabel='never'>
+    <mat-select formControlName="searchSystem" 
+                placeholder="Укажите поисковую систему">
+      <mat-option value="google.com">google.com</mat-option>
+      <mat-option value="bing.com">bing.com</mat-option>
+      <mat-option value="ask.com">ask.com</mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.get('searchSystem')?.hasError('required')&& preSubmitInvalid">
+      Вам нужно выбрать поисковую систему
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="onSubmit()" type="submit">Искать</button>
+</form>
