@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
       this.preSubmitInvalid = false;
 
       const system = this.form.get('searchSystem').value;
-      const request = this.form.get('searchField').value.split(' ').join('+');
+      const request = this.form.get('searchField').value.replace(/&/g, ' ').split(' ').join('+');
       document.location.href = this.getUrl(system, request);
     }
   }
